@@ -1,0 +1,91 @@
+nav{
+  font-family: sans-serif;
+  background-color: rgba(29, 29, 29, 0.6);
+}
+
+.light-mode {
+  min-height: 700px;
+  background: linear-gradient(45deg, #833ab4, #b61414, #d3933a);
+  color: #ffffff;
+  /* text-shadow: 0.5px 0.5px 0 #000000, 0.5px -0.5px 0 #000000, -0.5px 0.5px 0 #000000, -0.5px -0.5px 0 #000000, 0.5px 0px 0 #000000, 0px 0.5px 0 #000000, -0.5px 0px 0 #000000, 0px -0.5px 0 #000000;  */
+
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.dark-mode {
+  min-height: 700px;
+  color:#ffffff ;
+  align-items: center;
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+  background-blend-mode: multiply; 
+}
+
+.theHeader {
+  padding-top: 280px
+}
+
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.card-body {
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+}
+
+.modalBlur{
+  filter: blur(10px);
+}
+
+.light-mode .modal-content{
+  background: linear-gradient(45deg, #833ab4, #b61414, #d3933a);
+  opacity: 0.9;
+}
+
+.light-mode .btn-outline-warning{
+  color: #fff;
+  border-color: #343a40 !important;
+  background-color: #343a40 !important;
+}
+
+.dark-mode .modal-content {
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+  color: rgb(185, 185, 185);
+}
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
