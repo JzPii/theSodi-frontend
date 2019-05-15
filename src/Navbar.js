@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import logo from './FlatLogo.png';
 
 export default class Navbar extends Component {
   render() {
@@ -6,7 +7,7 @@ export default class Navbar extends Component {
 <div>
 <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
     
-    <img className="logo" src="img/logonf2.png" alt="logo"/>
+    <img className="logo" src={logo} alt="logo" height="50"/>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
     </button>

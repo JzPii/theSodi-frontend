@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import BoothID from './insideBooth/BoothID';
 
 export default class Booth extends Component {
   render() {
@@ -20,7 +22,8 @@ export default class Booth extends Component {
             </div>
 
             <div className="d-flex justify-content-around mb-3">
-                <button type="button" className="btn btn-outline-danger rounded-2 col-8">Join </button>
+                <Link to="/boothid" component={BoothID} className="btn btn-outline-danger rounded-2 col-8" style={{backgroundColor: 'none'}}>Join</Link>
+
             </div>
         </div>
     </div>

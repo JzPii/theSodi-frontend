@@ -9,7 +9,7 @@
 Sodi simply is a Social-dining app. A booth of 4 people will meet up and talk about the same interest.
 
 ### Landing Page
-http://thefinalparadox.netlify.com/main.html
+http://thesodi-v1.netlify.com
 
 
 ### Motivations + Problems
