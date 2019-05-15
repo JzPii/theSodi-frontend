@@ -20,7 +20,7 @@ changeMode() {
 }
 
 getList = async () => {
-  const url = `./testdb.jason`;
+  const url = `localhost:5000`;
   let results = await fetch(url);
   let data = await results.json(); 
   this.setState({
@@ -53,6 +53,14 @@ render () {
         <Booth className={mode}></Booth>
         <Booth className={mode}></Booth>
         <Booth className={mode}></Booth>
+        <Booth className={mode}></Booth>
+        <Booth className={mode}></Booth>
+        <Booth className={mode}></Booth>
+
+        <Booth className={mode}></Booth>
+        <Booth className={mode}></Booth>
+        <Booth className={mode}></Booth>
+
       </div>
     
     

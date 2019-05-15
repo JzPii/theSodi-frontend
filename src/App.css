@@ -31,9 +31,6 @@ nav{
   margin-left: 0 !important;
 }
 
-.card-body {
-  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
-}
 
 .modalBlur{
   filter: blur(10px);
@@ -50,11 +47,42 @@ nav{
   background-color: #343a40 !important;
 }
 
+.light-mode .card-body {
+  /* background: linear-gradient(0deg, rgba(69, 31, 94, 0.4), rgba(182, 20, 20, 0.4), rgba(211, 147, 58, 0.4)); */
+  /* background: linear-gradient(45deg, #833ab4, #b61414) */
+}
+
+.light-mode .btn-warning:hover {
+  background: linear-gradient(45deg, #833ab4, #b61414, #d3933a) !important;
+  color: #ffc107;
+}
+
+.light-mode .btn-warning {
+  background-color: #ffc107 !important
+}
+
+.dark-mode .btn-warning {
+  color: #ffc107;
+  background-color: transparent !important
+}
+.dark-mode .btn-warning:hover {
+  background-color: #ffc107 !important
+
+}
+
 .dark-mode .modal-content {
   background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
   color: rgb(185, 185, 185);
+  opacity: 0.9;
 }
 
+.dark-mode .card-body {
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+}
+
+.card {
+  background: none !important;
+}
 
 .App {
   text-align: center;

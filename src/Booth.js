@@ -9,7 +9,7 @@ export default class Booth extends Component {
     <div className="card" style={{marginBottom:20}}>
         {/* <img className="card-img-top" alt="img" style={{}} src={'http://image.tmdb.org/t/p/w500/' + this.props.poster_path} /> */}
         <div className="container card-body">
-            <h3 className="font-weight-bold text-center" style={{fontFamily: 'fantasy', color: '#c0c0c0'}}>{this.props.boothName}booth Name</h3>
+            <h2 className="font-weight-bold text-center" style={{fontFamily: 'fantasy', color: '#c0c0c0'}}>{this.props.boothName}booth Name</h2>
             <p className="text-right font-italic text-muted">Occupied: {this.props.vote_average}/4 </p>
             
             <div className="row">
@@ -22,7 +22,7 @@ export default class Booth extends Component {
             </div>
 
             <div className="d-flex justify-content-around mb-3">
-                <Link to="/boothid" component={BoothID} className="btn btn-outline-danger rounded-2 col-8" style={{backgroundColor: 'none'}}>Join</Link>
+                <Link to="/boothid" component={BoothID} className="btn btn-warning rounded-2 col-8" style={{backgroundColor: 'none'}}>Join</Link>
 
             </div>
         </div>
