@@ -16,7 +16,7 @@ http://thesodi-v1.netlify.com
 
 *Why is this project useful? Why were you interested in working on it? What hair-on-fire problems do you see?*
 
-The idea for Sodi was born on a day when I decided to quit my job as a banker. Think about this, going to an event or a conference would take me a whole morning, talk to right people that sharing the same interest is the good point but again it takes lots of time.
+The idea for Sodi was born on a day when I decided to make a turn in my career path. Think about this, going to an event or a conference would take me a whole morning, talk to right people that sharing the same interest is the good point but again it takes lots of time.
 So why dont you just list things you like on the table and if they're match with other people then let's do the talking while dining or drinking?
 
 One problem is 
