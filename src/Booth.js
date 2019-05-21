@@ -9,16 +9,16 @@ export default class Booth extends Component {
     <div className="card" style={{marginBottom:20}}>
         {/* <img className="card-img-top" alt="img" style={{}} src={'http://image.tmdb.org/t/p/w500/' + this.props.poster_path} /> */}
         <div className="container card-body">
-            <h2 className="font-weight-bold text-center" style={{fontFamily: 'fantasy', color: '#c0c0c0'}}>{this.props.boothName}booth Name</h2>
-            <p className="text-right font-italic text-muted">Occupied: {this.props.vote_average}/4 </p>
-            
+            <h2 className="font-weight-bold text-center" style={{fontFamily: 'fantasy', color: '#c0c0c0'}}>{this.props.booth.name}</h2>
             <div className="row">
-                <div className="col-6">
-                    <p className="text-right" style={{}}>{this.props.userInterest}userInterest </p>
+                <p className="col-6 text-left font-italic text-muted">Occupied: {this.props.vote_average}/4 </p>
+                <div className="col-6 text-right">
+                    <p style={{}}>{this.props.booth.interest} </p>
                 </div>
-                <div className="col-6">
-                    <p className="text-left" style={{}}>{this.props.boothLookingfor}boothLookingfor</p>
-                </div>
+            </div>
+
+                <div className="col-10">
+                    <p className="text-left" style={{}}>{this.props.booth.description}</p>
             </div>
 
             <div className="d-flex justify-content-around mb-3">

@@ -20,14 +20,16 @@ changeMode() {
 }
 
 getList = async () => {
-  const url = `localhost:5000`;
+  const url = `https://sodi-backend.herokuapp.com/booths`;
   let results = await fetch(url);
   let data = await results.json(); 
   this.setState({
-    boothLists: data.results
+    boothLists: data.booths
   })
 }
-
+componentDidMount() {
+  this.getList()
+}
 
 render () {
   let mode
@@ -50,17 +52,10 @@ render () {
       </div>
       
       <div className="row">
-        <Booth className={mode}></Booth>
-        <Booth className={mode}></Booth>
-        <Booth className={mode}></Booth>
-        <Booth className={mode}></Booth>
-        <Booth className={mode}></Booth>
-        <Booth className={mode}></Booth>
-
-        <Booth className={mode}></Booth>
-        <Booth className={mode}></Booth>
-        <Booth className={mode}></Booth>
-
+        {this.state.boothLists ? 
+        this.state.boothLists.map( booth => <Booth className={mode} booth={booth}></Booth>):
+          <div>Loading</div>
+        }
       </div>
     
     

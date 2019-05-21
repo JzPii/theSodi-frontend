@@ -22,7 +22,7 @@ p {
 
 .chatroom {
   min-width: 300px;
-  min-height: 600px;
+  height: 550px;
   background-color: rgba(0, 0, 0, 0.438);
   border-radius: 5px;
   /* overflow: auto; */
@@ -45,7 +45,7 @@ h3 {
   box-sizing: border-box;
   padding: 0 20px;
   margin: 10px 0 0;
-  height: 510px;
+  height: 460px;
   overflow-y: scroll;
 }
 

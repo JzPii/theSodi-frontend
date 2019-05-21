@@ -1,6 +1,28 @@
 import React, { Component } from 'react'
 
 export default class CreateNewBooth extends Component {
+  // constructor() {
+  //   super();
+  //   this.state = {
+
+  //   }
+  // }
+  // postnewBooth() {
+  //   fetch(url, {
+  //     headers: {'Content-Type': 'application/json'},
+  //     method: 'POST',
+  //     body: JSON.stringify(data)
+  //     })
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       console.log(data) // Prints result from `response.json()` in getRequest
+  //     })
+  //     .catch(error => console.error(error))
+  // }
+  // handleClick() {
+  //   const data = { 'name': , ''}
+  //   postnewBooth(data)
+  // }
   render() {
     return (
       <div>
@@ -35,8 +57,13 @@ export default class CreateNewBooth extends Component {
                   </form>
                   </div>
                   <div className="modal-footer">
-                    <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" className="btn btn-outline-warning"> Create new Booth</button>
+                    <button type="button" className="btn btn-secondary" data-dismiss="modal" >Close</button>
+                    <button type="button" 
+                    className="btn btn-outline-warning"
+                    // onClick={this.handleClick}
+                    >
+                       Create new Booth
+                       </button>
                   </div>
                 </div>
               </div>
