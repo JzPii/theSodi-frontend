@@ -1,7 +1,34 @@
 import React, { Component } from 'react';
 import logo from './Flatlogo.png';
+import LoginFB from './LoginFB';
 
 export default class Navbar extends Component {
+
+state = {
+isLogin: localStorage.getItem('username') ?  true : false,
+username: localStorage.getItem('username'),
+profilepic: localStorage.getItem('profilepic') 
+}
+
+LogOut = () => {
+    localStorage.clear()
+    this.setState ({
+        isLogin: false,
+        username: '',
+        profilepic: ''
+    })
+    this.props.appLogout(false)
+}
+
+handleLogin = (isLogin) => {
+    this.setState({
+        isLogin: isLogin,
+        username: localStorage.getItem('username'),
+        profilepic: localStorage.getItem('profilepic') 
+
+    })
+    this.props.appLogin(true)
+}
   render() {
     return (
 <div>
@@ -15,25 +42,32 @@ export default class Navbar extends Component {
     <div className="collapse navbar-collapse ml-4" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto" style={{fontSize:'14px'}}>
         <li className="nav-item">
-            <a className="nav-link" href="#poster">Home <span className="sr-only">(current)</span></a>
+            <a className="btn btn-outline-light" style={{border: 'none'}}  href="/">Home <span className="sr-only">(current)</span></a>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
             <a className="nav-link" href="#trailer">something 1</a>
+        </li> */}
+        <li className="nav-item">
+            <a className="btn btn-outline-light" style={{border: 'none'}}  href="http://janyzupi.wix.com/PhongVuCV">About me</a>
         </li>
-        
         
         <li className="nav-item">
-            <a className="nav-link" href="#news">something 2</a>
+            <button className="btn btn-outline-light" style={{border: 'none'}} onClick={() => this.props.handleClick()}  type="button" name="dark_light" >🌝🌓</button>
         </li>
-        <li className="nav-item">
-            <a className="nav-link" href="Aboutus.html">something 3</a>
-        </li>
-        
+
+
         </ul>
 
-        <button onClick={() => this.props.handleClick()} className="btn btn-outline-light" type="button" name="dark_light"  style={{marginRight:'10px'}}>Toggle 🌛</button>
-        <button type="button " className="btn btn-danger my-2 my-sm-0">Join Us</button>
-        <button className="btn btn-outline-warning" style={{borderRadius:'40px', marginLeft:'5px'}}>J</button>
+        {/* <button type="button " className="btn btn-danger my-2 my-sm-0">Join Us</button> */}
+        {!this.state.isLogin ?
+            (<LoginFB handleLogin={this.handleLogin}></LoginFB>):
+            (
+            <div>
+                <img  src={this.state.profilepic} style={{marginRight: '10px'}}/> 
+                <button  className="btn btn-danger" onClick={this.LogOut}>Logout</button>
+            </div>
+            )
+        }
     </div>
 </nav>
 

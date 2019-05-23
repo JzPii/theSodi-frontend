@@ -27,7 +27,7 @@ export default class CreateNewBooth extends Component {
     return (
       <div>
         <button className="btn btn-outline-warning mx-4" style={{maxHeight: '38px'}} type="button"  data-toggle="modal" data-target="#exampleModal">
-              Create a Booth
+              New Booth
             </button>
 
             {/* <!-- Modal --> */}

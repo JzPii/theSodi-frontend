@@ -9,9 +9,9 @@ class App extends Component {
   constructor () {
     super ();
     this.state = {
-      darkmode: false,
+      isLogin: localStorage.getItem('username') ?  true : false,
+      darkmode: true,
       boothLists: [],
-
     }
   }
 changeMode() {
@@ -27,6 +27,17 @@ getList = async () => {
     boothLists: data.booths
   })
 }
+
+appLogin = (isLogin) => {
+  this.setState({
+    isLogin: isLogin })
+}
+
+appLogout = () => {
+  this.setState({
+    isLogin: false })
+}
+
 componentDidMount() {
   this.getList()
 }
@@ -39,24 +50,35 @@ render () {
   else {
     mode = "light-mode"
   }
-
+console.log(this.props)
   return (
 <div className={mode}>
-    <Navbar handleClick={() => this.changeMode()} />
-    <Header></Header>
-    <div className="container" style={{marginTop: '100px'}}>
-      <div className="d-flex justify-content-center my-4" style={{width: '100%'}}>
-        <CreateNewBooth></CreateNewBooth>            
-        <input className="form-control " style={{maxWidth: '300px', marginBottom:'30px'}} type="text" placeholder="Search for it" />  
+    <Navbar handleClick={() => this.changeMode()} appLogin = {this.appLogin} appLogout={this.appLogout}/>
+
+  { this.state.isLogin ? (
+        <div>
+ 
+        <div className="container" style={{paddingTop: '100px'}}>
+          <div className="d-flex justify-content-center my-4" style={{width: '100%'}}>
+            <CreateNewBooth></CreateNewBooth>            
+            <input className="form-control " style={{maxWidth: '300px', marginBottom:'30px', opacity: '0.8'}} type="text" placeholder="Search for it" />  
+          </div>
+          </div>
+          
+          <div className="row">
+            {this.state.boothLists ? 
+            this.state.boothLists.map( booth => <Booth className={mode} booth={booth}></Booth>):
+              <div>Loading</div>
+            }
+        </div>
+  
       </div>
-      </div>
-      
-      <div className="row">
-        {this.state.boothLists ? 
-        this.state.boothLists.map( booth => <Booth className={mode} booth={booth}></Booth>):
-          <div>Loading</div>
-        }
-      </div>
+  ) : (
+    <div>
+      <Header></Header>
+    </div>
+  ) }
+
     
     
 </div>

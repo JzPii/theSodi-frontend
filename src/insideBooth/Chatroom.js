@@ -49,6 +49,13 @@ class Chatroom extends React.Component {
 
     componentDidMount() {
         this.scrollToBot();
+        let chats= JSON.parse(localStorage.getItem("chats"));
+        if (chats) {
+            this.setState({
+                chats: chats
+            },() => console.log(this.state.chats))
+        }
+        
     }
 
     componentDidUpdate() {
@@ -70,8 +77,51 @@ class Chatroom extends React.Component {
             }])
         }, () => {
             ReactDOM.findDOMNode(this.refs.msg).value = "";
+            localStorage.setItem("chats", JSON.stringify(this.state.chats))
         });
     }
+
+    // uploadMessage = (chat) => {
+    //     const url = "https://sodi-backend.herokuapp.com/message";
+    
+    //     fetch(url, {
+    //       method: "POST",
+    //       headers: {
+    //         Accept: "application/json",
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify(chat)
+    //     })
+      
+    // }
+
+    // handleListHouse = (address, city, district, ward, street, number) => {
+    //     const url = "http://localhost:5000/sell";
+    //     const token = "Token " + this.state.token;
+    
+    //     fetch(url, {
+    //       method: "POST",
+    //       headers: {
+    //         Accept: "application/json",
+    //         "Content-Type": "application/json",
+    //         Authorization: token
+    //       },
+    //       body: JSON.stringify({
+    //         address: address,
+    //         city: city,
+    //         district: district,
+    //         ward: ward,
+    //         street: street,
+    //         number: number
+    //       })
+    //     })
+    //       .then(response => {
+    //         return response.json();
+    //       })
+    //       .then(data => {
+    //         console.log(data);
+    //       });
+    //   };
 
     render() {
         const username = "Kevin Hsu";

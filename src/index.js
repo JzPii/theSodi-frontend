@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import BoothID from './insideBooth/BoothID';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import test1ti from './test1ti';
+import login from './login';
 
 function AppRouter() {
     return (
@@ -14,7 +14,7 @@ function AppRouter() {
         <div>  
           <Route path="/" exact component={App} />
           <Route path="/boothid" exact component={BoothID} />
-          <Route path="/test1ti" exact component={test1ti} />
+          <Route path="/login" exact component={login} />
 
         </div>
       </Router>

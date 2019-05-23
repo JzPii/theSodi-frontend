@@ -17,7 +17,7 @@ export default class Booth extends Component {
                 </div>
             </div>
 
-                <div className="col-10">
+                <div className="col-12">
                     <p className="text-left" style={{}}>{this.props.booth.description}</p>
             </div>
 

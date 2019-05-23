@@ -9,6 +9,16 @@ p {
   display: inline-block;
 }
 
+.dark-mode .chatApp {
+  min-height: 700px;
+  color:#ffffff ;
+  align-items: center;
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+  background-blend-mode: multiply; 
+}
+
+
 .chatApp {
   background: linear-gradient(45deg, #833ab4, #b61414, #d3933a);
   /* height: 100vh;
@@ -17,16 +27,24 @@ p {
   align-items: center;
   justify-content: center;
   min-height: 700px;
+  font-family: sans-serif;
+
 
 }
 
-.chatroom {
+ .chatroom {
   min-width: 300px;
   height: 550px;
   background-color: rgba(0, 0, 0, 0.438);
   border-radius: 5px;
   /* overflow: auto; */
   box-shadow: 0 0 8px 0 rgba(0,0,0, 0.3);
+}
+
+.dark-mode h3 {
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+  color: #d3933a;
+
 }
 
 h3 {
@@ -47,6 +65,10 @@ h3 {
   margin: 10px 0 0;
   height: 460px;
   overflow-y: scroll;
+}
+
+.dark-mode .chatroom .chats .chat {
+  background: #464543
 }
 
 .chatroom .chats .chat {
@@ -71,7 +93,13 @@ h3 {
   left: 0px;
 }
 
+.dark-mode .chatroom .chats .chat.right {
+  background: #d3933a;
+  color: #000000c7
+}
+
 .chatroom .chats .chat.right {
+  background: #d3933a;
   float: right;
   clear: both;
 }
@@ -79,6 +107,12 @@ h3 {
 .chatroom .chats .chat a {
   text-decoration: none;
   color:#3498DB;
+}
+
+.dark-mode .chatroom .input{
+  background: #323232;
+
+
 }
 
 .chatroom .input {
@@ -89,6 +123,8 @@ h3 {
   flex-direction: row;
   align-items: center;
 }
+
+
 
 .chatroom .input input[type="text"] {
   background: rgba(255, 255, 255, 0.5);
@@ -104,6 +140,8 @@ h3 {
   box-sizing: border-box;
   font-size: 14px;
 }
+
+
 
 .chatroom .input input[type="submit"] {
   background: transparent;
