@@ -9,7 +9,7 @@ export default class Booth extends Component {
     <div className="card" style={{marginBottom:20}}>
         {/* <img className="card-img-top" alt="img" style={{}} src={'http://image.tmdb.org/t/p/w500/' + this.props.poster_path} /> */}
         <div className="container card-body">
-            <h2 className="font-weight-bold text-center" style={{fontFamily: 'fantasy', color: '#c0c0c0'}}>{this.props.booth.name}</h2>
+            <h2 className="font-weight-bold text-center" style={{fontFamily: 'Poiret One', color: '#c0c0c0'}}>{this.props.booth.name}</h2>
             <div className="row">
                 <p className="col-6 text-left font-italic text-muted">Occupied: {this.props.vote_average}/4 </p>
                 <div className="col-6 text-right">
