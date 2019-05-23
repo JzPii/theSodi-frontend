@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './Flatlogo.png';
 import LoginFB from './LoginFB';
 
 export default class Navbar extends Component {
@@ -34,7 +33,7 @@ handleLogin = (isLogin) => {
 <div>
 <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
     
-    <a href="/"><img  className="logo" src={logo} alt="logo" height="50"></img></a>
+    <a href="/"><img  className="logo" src="/Flatlogo.png" alt="logo" height="50"></img></a>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
     </button>
