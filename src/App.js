@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import Header from './Header'
 import Booth from './Booth'
 import CreateNewBooth from './CreateNewBooth';
+import Loader from 'react-loader-spinner'
 
 class App extends Component {
   constructor () {
@@ -65,12 +66,18 @@ console.log(this.props)
           </div>
           </div>
           
+          
           <div className="row">
             {this.state.boothLists ? 
             this.state.boothLists.map( booth => <Booth className={mode} booth={booth}></Booth>):
-              <div>Loading</div>
+            <Loader 
+            type="Mutating-Dots"
+            color="#d3933a"
+            height="100"	
+            width="100"
+         /> 
             }
-        </div>
+           </div>
   
       </div>
   ) : (
